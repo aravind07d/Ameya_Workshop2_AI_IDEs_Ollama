@@ -1,0 +1,59 @@
+JOHN DOE
+Software Engineer
+Email: john.doe@email.com | Phone: (555) 123-4567 | LinkedIn: linkedin.com/in/johndoe
+
+PROFESSIONAL SUMMARY
+Experienced Software Engineer with 5+ years of expertise in developing scalable web applications using Python, FastAPI, and modern cloud technologies. Proven track record of leading development teams and delivering high-quality software solutions.
+
+TECHNICAL SKILLS
+Programming Languages: Python, JavaScript, TypeScript, Java, SQL
+Frameworks: FastAPI, Django, Flask, React, Node.js
+Databases: PostgreSQL, MongoDB, Redis, MySQL
+Cloud & DevOps: AWS (EC2, S3, Lambda), Docker, Kubernetes, CI/CD, Git
+Tools: Git, JIRA, Jenkins, Terraform, Linux
+
+PROFESSIONAL EXPERIENCE
+
+Senior Software Engineer | Tech Solutions Inc. | 2021 - Present
+• Led development of microservices architecture using FastAPI, improving system scalability by 40%
+• Designed and implemented RESTful APIs serving 1M+ daily requests
+• Collaborated with cross-functional teams to deliver features on time and within budget
+• Mentored junior developers and conducted code reviews
+• Reduced API response time by 30% through database optimization and caching strategies
+
+Software Engineer | Digital Innovations LLC | 2019 - 2021
+• Developed full-stack web applications using Python, Django, and React
+• Implemented automated testing pipelines reducing bug rate by 25%
+• Worked on cloud migration project moving infrastructure to AWS
+• Participated in agile development processes and sprint planning
+
+Junior Developer | StartupXYZ | 2018 - 2019
+• Built responsive web applications using JavaScript and Python
+• Fixed bugs and implemented new features based on user feedback
+• Learned best practices in software development and version control
+
+EDUCATION
+Bachelor of Science in Computer Science
+State University | 2014 - 2018
+GPA: 3.8/4.0
+
+CERTIFICATIONS
+• AWS Certified Solutions Architect - Associate
+• Certified Kubernetes Administrator (CKA)
+
+PROJECTS
+E-Commerce Platform (2022)
+• Built scalable e-commerce backend using FastAPI and PostgreSQL
+• Implemented payment processing integration
+• Deployed on AWS with Docker containers
+
+Task Management API (2021)
+• Developed REST API for task management system
+• Used JWT authentication and role-based access control
+• Achieved 99.9% uptime with automated monitoring
+
+ACHIEVEMENTS
+• Received "Employee of the Year" award in 2022
+• Published article on "Microservices Best Practices" in tech blog
+• Open source contributor with 500+ GitHub stars across projects
+
