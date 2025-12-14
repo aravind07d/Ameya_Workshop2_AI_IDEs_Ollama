@@ -23,7 +23,8 @@ class SkillAnalysisRequest(BaseModel):
 class SkillGapAnalysisRequest(BaseModel):
     resume_text: Optional[str] = None
     resume_id: Optional[str] = None
-    target_role: str
+    target_role: Optional[str] = None
+    job_description: Optional[str] = None
 
 class WeeklyLearningTaskRequest(BaseModel):
     resume_text: Optional[str] = None
@@ -236,13 +237,17 @@ async def skill_gap_analysis(request: SkillGapAnalysisRequest):
     else:
         raise HTTPException(status_code=400, detail="Either resume_text or resume_id is required")
     
+    target_role = request.target_role or request.job_description
+    if not target_role:
+        raise HTTPException(status_code=400, detail="Either target_role or job_description is required")
+    
     extracted_skills_data = await _extract_skills_from_resume(resume_text)
     extracted_skills = extracted_skills_data.get("skills", [])
     
     prompt = f"""Compare the candidate's skills against the target role requirements and identify missing skills.
 
 Candidate's Skills: {', '.join(extracted_skills) if extracted_skills else 'None listed'}
-Target Role: {request.target_role}
+Target Role: {target_role}
 
 Return ONLY valid JSON:
 {{

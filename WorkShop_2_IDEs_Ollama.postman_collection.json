@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "67894fbc-8dbd-4827-b62b-8519c2083db4",
+		"name": "WorkShop_2_IDEs_Ollama",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7073609"
+	},
+	"item": [
+		{
+			"name": "health",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8000/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload_resume",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Aravind/Knowledge/AI/WorkShop_2_IDEs_Local_LLMs/sample_resume.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/upload_resume",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"upload_resume"
+					],
+					"query": [
+						{
+							"key": "file",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "analyze_skills",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"resume_text\": \"JOHN DOE\\r\\nSoftware Engineer\\r\\nEmail: john.doe@email.com | Phone: (555) 123-4567 | LinkedIn: linkedin.com/in/johndoe\\r\\n\\r\\nPROFESSIONAL SUMMARY\\r\\nExperienced Software Engineer with 5+ years of expertise in developing scalable web applications using Python, FastAPI, and modern cloud technologies. Proven track record of leading development teams and delivering high-quality software solutions.\\r\\n\\r\\nTECHNICAL SKILLS\\r\\nProgramming Languages: Python, JavaScript, TypeScript, Java, SQL\\r\\nFrameworks: FastAPI, Django, Flask, React, Node.js\\r\\nDatabases: PostgreSQL, MongoDB, Redis, MySQL\\r\\nCloud & DevOps: AWS (EC2, S3, Lambda), Docker, Kubernetes, CI/CD, Git\\r\\nTools: Git, JIRA, Jenkins, Terraform, Linux\\r\\n\\r\\nPROFESSIONAL EXPERIENCE\\r\\n\\r\\nSenior Software Engineer | Tech Solutions Inc. | 2021 - Present\\r\\n• Led development of microservices architecture using FastAPI, improving system scalability by 40%\\r\\n• Designed and implemented RESTful APIs serving 1M+ daily requests\\r\\n• Collaborated with cross-functional teams to deliver features on time and within budget\\r\\n• Mentored junior developers and conducted code reviews\\r\\n• Reduced API response time by 30% through database optimization and caching strategies\\r\\n\\r\\nSoftware Engineer | Digital Innovations LLC | 2019 - 2021\\r\\n• Developed full-stack web applications using Python, Django, and React\\r\\n• Implemented automated testing pipelines reducing bug rate by 25%\\r\\n• Worked on cloud migration project moving infrastructure to AWS\\r\\n• Participated in agile development processes and sprint planning\\r\\n\\r\\nJunior Developer | StartupXYZ | 2018 - 2019\\r\\n• Built responsive web applications using JavaScript and Python\\r\\n• Fixed bugs and implemented new features based on user feedback\\r\\n• Learned best practices in software development and version control\\r\\n\\r\\nEDUCATION\\r\\nBachelor of Science in Computer Science\\r\\nState University | 2014 - 2018\\r\\nGPA: 3.8/4.0\\r\\n\\r\\nCERTIFICATIONS\\r\\n• AWS Certified Solutions Architect - Associate\\r\\n• Certified Kubernetes Administrator (CKA)\\r\\n\\r\\nPROJECTS\\r\\nE-Commerce Platform (2022)\\r\\n• Built scalable e-commerce backend using FastAPI and PostgreSQL\\r\\n• Implemented payment processing integration\\r\\n• Deployed on AWS with Docker containers\\r\\n\\r\\nTask Management API (2021)\\r\\n• Developed REST API for task management system\\r\\n• Used JWT authentication and role-based access control\\r\\n• Achieved 99.9% uptime with automated monitoring\\r\\n\\r\\nACHIEVEMENTS\\r\\n• Received \\\"Employee of the Year\\\" award in 2022\\r\\n• Published article on \\\"Microservices Best Practices\\\" in tech blog\\r\\n• Open source contributor with 500+ GitHub stars across projects\\r\\n\\r\\n\",\r\n  \"job_description\": \"AI Solutions Architect\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/analyze_skills",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"analyze_skills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "analyze_skills_after_2nd_prompt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"resume_id\": \"a0c1132e-ce51-401a-9aec-5a88644ac6eb\",\r\n  \"job_description\": \"AI Solutions Architect\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/analyze_skills",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"analyze_skills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "skill_gap_analysis_after_3rd_prompt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"resume_id\": \"94aa07df-a570-4c40-8975-5cf0a7c0c183\",\r\n  \"target_role\": \"AI Solutions Architect\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/skill_gap_analysis",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"skill_gap_analysis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "weekly_learning_task_generatorafter_3rd_prompt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"resume_id\": \"94aa07df-a570-4c40-8975-5cf0a7c0c183\",\r\n  \"target_role\": \"AI Solutions Architect\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/weekly_learning_task_generator",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"weekly_learning_task_generator"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
